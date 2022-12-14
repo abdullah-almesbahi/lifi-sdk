@@ -1,0 +1,11 @@
+import { ChainId, ExtendedChain } from '@lifi/types';
+export default class ChainsService {
+    private static instance;
+    private readonly loadingPromise;
+    private chains;
+    constructor();
+    private loadAvailableChains;
+    static getInstance(): ChainsService;
+    getChainById(chainId: ChainId): Promise<ExtendedChain>;
+    getChains(): Promise<ExtendedChain[]>;
+}
